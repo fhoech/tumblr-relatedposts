@@ -67,7 +67,7 @@
 		else {
 			$(config.tags).each(function (i, tag) {
 				console.info('Related posts: Sending request for tag “' + tag + '”…');
-				$.getJSON('http://api.tumblr.com/v2/blog/' + (config.domain || document.domain) + '/posts?api_key=L3SCmQDARjXqJFnzQhj2cS6yvIDJF8lxxZgJuwKvuTW7tAdDbm&limit=' + (config.num + 1) + '&offset=0&type=' + config.type + '&tag=' + escape(tag) + '&jsonp=?', function (data, textStatus, jqXHR) {
+				$.getJSON('http://api.tumblr.com/v2/blog/' + (config.domain || document.domain) + '/posts?api_key=Bmv7rBP9ST8N3SmHcwW2ht3qU0gbnljPFh21FWtAipyWlrsgL2&limit=' + (config.num + 1) + '&offset=0&type=' + config.type + '&tag=' + escape(tag) + '&jsonp=?', function (data, textStatus, jqXHR) {
 					console.info('Related posts: Got answer for tag “' + tag + '”…', data);
 					if (related_posts.length == config.num) {
 						console.info('Related posts: Skipping processing for tag “' + tag + '” because we already have hit the limit.');
